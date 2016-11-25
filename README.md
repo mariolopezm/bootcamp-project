@@ -24,11 +24,11 @@ After taking this course you will understand how to use Angular 2 effectively by
 December | Schedule | Duration
 ---------|----------|---------
 Friday 2 | 5:00 pm - 9:00 pm | 4
-Saturday 3 | 8:00 pm - 5:00 pm | 8
+Saturday 3 | 8:00 am - 5:00 pm | 8
 Monday 5 |  5:00 pm - 9:00 pm | 4
 Tuesday 6 | 5:00 pm - 9:00 pm | 4
 Friday 16 | 5:00 pm - 9:00 pm | 4
-Saturday 17 | 8:00 pm - 5:00 pm | 8
+Saturday 17 | 8:00 am - 5:00 pm | 8
  | Total Duration | 32 Hours
 
 
