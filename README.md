@@ -19,13 +19,27 @@ After taking this course you will understand how to use Angular 2 effectively by
 
 ## Program Schedule
 
+
+
+December | Schedule | Duration
+---------|----------|---------
+Friday 2 | 5:00 pm - 9:00 pm | 4
+Saturday 3 | 8:00 pm - 5:00 pm | 8
+Monday 5 |  5:00 pm - 9:00 pm | 4
+Tuesday 6 | 5:00 pm - 9:00 pm | 4
+Friday 16 | 5:00 pm - 9:00 pm | 4
+Saturday 17 | 8:00 pm - 5:00 pm | 8
+ | Total Duration | 32 Hours
+
+
+
 ### DAY 1: Friday, December 2
 
 - Introduction
 - Setup and Tooling
 - TypeScript
 
-### Resources
+#### Resources
 
 - [Slides](http://slides.com/jdjuan/angular2-day1)
 - Branches
@@ -36,22 +50,47 @@ After taking this course you will understand how to use Angular 2 effectively by
 - Components
 - Binding and Events
 
+#### Resources
+
+- [Slides](http://slides.com/jdjuan/angular2-day2)
+- Branches
+
 ### DAY 3: Monday, December 5
 
 - NgModules
+
+#### Resources
+
+- [Slides](http://slides.com/jdjuan/angular2-day3)
+- Branches
 
 ### DAY 4: Tuesday, December 6
 
 - Pipes
 - Services
 
+#### Resources
+
+- [Slides](http://slides.com/jdjuan/angular2-day4)
+- Branches
+
 ### DAY 5: Friday, December 16
 
 - HTTP, Promises, and Observables
 - Directives
+
+#### Resources
+
+- [Slides](http://slides.com/jdjuan/angular2-day5)
+- Branches
 
 ### DAY 6: Saturday, December 17
 
 - Lazy-loading
 - Building and Tools
 - Real World Application
+
+#### Resources
+
+- [Slides](http://slides.com/jdjuan/angular2-day6)
+- Branches
