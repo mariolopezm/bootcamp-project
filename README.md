@@ -1,7 +1,7 @@
 # Angular 2 Bootcamp
 
 ## Description
-This course covers all the core concepts and technical knowledge required to build professional Angular 2 applications. This bootcamp includes an introduction to SPA,  TypeScript, project setup, architecture, events, data binding, services, remote calls, observables, routing, modules among others.
+This course covers all the core concepts and technical knowledge required to build professional Angular 2 applications. This boot camp includes an introduction to SPA,  TypeScript, project setup, architecture, events, data binding, services, remote calls, observables, routing, modules among others.
 
 After taking this course you will understand how to use Angular 2 effectively by building a real world example. We will go through several hand-on exercises where you will grasp the main concepts of building a robust web application.
 
