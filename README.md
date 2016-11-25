@@ -14,12 +14,8 @@ After taking this course you will understand how to use Angular 2 effectively by
 
 - The candidate should have experience in building web applications with HTML5 and JavaScript.
 - No previous experience with AngularJS is required.
-- The candidate should be proficient in English.
-- The candidate should have Back-end development experience higher than a year.
 
 ## Program Schedule
-
-
 
 December | Schedule | Duration
 ---------|----------|---------
@@ -32,6 +28,7 @@ Saturday 17 | 8:00 am - 5:00 pm | 8
  | Total Duration | 32 Hours
 
 
+## Required Environment Setup
 
 ### DAY 1: Friday, December 2
 
