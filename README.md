@@ -14,27 +14,27 @@ This technical course covers all the core concepts and guides you to build end-t
 
 ## Program Schedule
 ### DAY 1: Friday, December 2
-##### 1. Introduction
-##### 2. Setup and Tooling
-##### 3. TypeScript
+- Introduction
+- Setup and Tooling
+- TypeScript
 
 ### DAY 2: Saturday, December 3
-##### 1. Angular 2 Architecture
-##### 2. Components
-##### 3. Binding and Events
+- Architecture of A2
+- Components
+- Binding and Events
 
 ### DAY 3: Monday, December 5
-##### 1. NgModules
+- NgModules
 
 ### DAY 4: Tuesday, December 6
-##### 1. Pipes
-##### 2. Services
+- Pipes
+- Services
 
 ### DAY 5: Friday, December 16
-##### 1. HTTP, Promises, and Observables
-##### 2. Directives
+- HTTP, Promises, and Observables
+- Directives
 
 ### DAY 6: Saturday, December 17
-##### 1. Lazy-loading
-##### 2. Building and Tools
-##### 3. Real World Application
+- Lazy-loading
+- Building and Tools
+- Real World Application
