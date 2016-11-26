@@ -4,7 +4,7 @@
 
 This course covers all the core concepts and technical knowledge required to build professional Angular 2 applications. This boot camp includes an introduction to SPA,  TypeScript, project setup, architecture, events, data binding, services, remote calls, observables, routing, modules among others.
 
-After taking this course you will understand how to use Angular 2 effectively by building a real world example. We will go through several hand-on exercises where you will grasp the main concepts of building a robust web application.
+After taking this course you will understand how to use Angular 2 effectively by building a real world example. We will go through several hands-on exercises where you will grasp the main concepts of building a robust web application.
 
 ## Assistance Limit
 
@@ -29,6 +29,7 @@ Saturday 17 | 8:00 am - 5:00 pm | 8
 
 
 ## Required Environment Setup
+TBD
 
 ### DAY 1: Friday, December 2
 
@@ -92,3 +93,12 @@ Saturday 17 | 8:00 am - 5:00 pm | 8
 
 - [Slides](http://slides.com/jdjuan/angular2-day6)
 - Branches
+
+## Success Criteria
+
+### Assistance Required:
+The participants must take at least 80% of the course, this is 26 hours.
+
+### Evaluation Parameters:
+TBD
+
