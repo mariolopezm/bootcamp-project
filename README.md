@@ -13,6 +13,7 @@ After taking this course you will understand how to use Angular 2 effectively by
 ## Selection Filter
 
 - The candidate should have experience in building web applications with HTML5 and JavaScript.
+- ES6 is desireable
 - No previous experience with AngularJS is required.
 
 ## Program Schedule
@@ -29,6 +30,7 @@ Saturday 17 | 8:00 am - 5:00 pm | 8
 
 
 ## Required Environment Setup
+
 TBD
 
 ### DAY 1: Friday, December 2
@@ -96,9 +98,11 @@ TBD
 
 ## Success Criteria
 
-### Assistance Required:
+### Assistance Required
+
 The participants must take at least 80% of the course, this is 26 hours.
 
-### Evaluation Parameters:
+### Evaluation Parameters
+
 TBD
 
