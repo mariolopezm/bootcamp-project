@@ -66,6 +66,7 @@ TBD
 ### DAY 4: Tuesday, December 6
 
 - Pipes
+- Dependency Injection
 - Services
 
 #### Resources
@@ -86,7 +87,6 @@ TBD
 ### DAY 6: Saturday, December 17
 
 - Lazy-loading
-- Building and Tools
 - Real World Application
 
 #### Resources
