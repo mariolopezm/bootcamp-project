@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Uh-oh we are messing with bootstrap classes*/
+.btn{
+    width:100%;
+}
+
+.row{
+    margin: 15px -15px;
+}
+
+
+.btn-success {
+    box-shadow: 0 0 0 1px #31c300 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #5eb924, 0 8px 8px 1px rgba(0,0,0,0.5);
+    background-color: #78d739;
+}
+
+
+.btn-primary {
+    box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #4D5BBE, 0 8px 8px 1px rgba(0,0,0,0.5);
+    background-color: #4274D7;
+}
+
+.btn-warning {
+    box-shadow: 0 0 0 1px #d79a47 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #D79A34, 0 8px 8px 1px rgba(0,0,0,0.5);
+    background-color: #FEAF20;
+}
+
+.btn-danger {
+    box-shadow: 0 0 0 1px #b93802 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #AA0000, 0 8px 8px 1px rgba(0,0,0,0.5);
+    background-color: #D73814;
+}
+
+.result {
+    height: 67px;
+    font-size: 44px;
+    text-align: right;
+    width: 100%;
+    box-shadow: inset 3px 3px rgba(0, 0, 0, 0.2);
+}
