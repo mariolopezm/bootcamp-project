@@ -31,7 +31,14 @@ Saturday 17 | 8:00 am - 5:00 pm | 8
 
 ## Required Environment Setup
 
-TBD
+### Tools
+
+- [Node 4.x.x and NPM 3.x.x](https://nodejs.org/en/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+
+### Commands
+
+```npm install angular-cli -g```
 
 ### DAY 1: Friday, December 2
 
