@@ -7,7 +7,7 @@
 -You will need to create a feature module(calculator) that will contain a component with the requiered styles and template for the calculator.
 
 -Do not forget to export the CalculatorComponent in the feature module and import it in the **root module**.
-asdad
+
 ## Time Limit
 
 30 minutes
