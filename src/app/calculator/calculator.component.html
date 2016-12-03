@@ -1,0 +1,80 @@
+<!-- calculator -->
+<div class="container">
+<div class="row">
+  <div class="col-xs-12 ">
+    <input type="text" [value]="expression" class="result">
+  </div>
+  <div class="col-xs-12">
+    <!-- First Row -->
+    <div class="row">
+      <div class="col-xs-3">
+        <app-button [value]='7' [buttonType]='Primary' (eventBinding)="printValue($event)"></app-button>
+      </div>
+      <div class="col-xs-3">
+        <app-button [value]='8' [buttonType]='Primary' (eventBinding)="printValue($event)"></app-button>
+      </div>
+      <div class="col-xs-3">
+        <app-button [value]='9' [buttonType]='Primary' (eventBinding)="printValue($event)"></app-button>
+      </div>
+      <div class="col-xs-3">
+        <app-button [value]="'+'" [buttonType]='Success' (eventBinding)="printValue($event)"></app-button>
+      </div>
+    </div>
+
+      <!-- Second Row -->
+    <div class="row">
+      <div class="col-xs-3">
+        <app-button [value]='4' [buttonType]='Primary' (eventBinding)="printValue($event)"></app-button>
+      </div>
+      <div class="col-xs-3">
+        <app-button [value]='5' [buttonType]='Primary' (eventBinding)="printValue($event)"></app-button>
+      </div>
+      <div class="col-xs-3">
+        <app-button [value]='6' [buttonType]='Primary' (eventBinding)="printValue($event)"></app-button>
+      </div>
+      <div class="col-xs-3">
+        <app-button [value]="'-'" [buttonType]='Success' (eventBinding)="printValue($event)"></app-button>
+      </div>
+    </div>
+
+      <!-- Third Row -->
+    <div class="row">
+      <div class="col-xs-3">
+        <app-button [value]='3' [buttonType]='Primary' (eventBinding)="printValue($event)"></app-button>
+      </div>
+      <div class="col-xs-3">
+        <app-button [value]='2' [buttonType]='Primary' (eventBinding)="printValue($event)"></app-button>
+      </div>
+      <div class="col-xs-3">
+        <app-button [value]='1' [buttonType]='Primary' (eventBinding)="printValue($event)"></app-button>
+      </div>
+      <div class="col-xs-3">
+        <app-button [value]="'*'" [buttonType]='Success' (eventBinding)="printValue($event)"></app-button>
+      </div>
+    </div>
+
+    <!-- Fourth Row -->
+    <div class="row">
+      <div class="col-xs-3">
+        <app-button [value]='0' [buttonType]='Primary' (eventBinding)="printValue($event)"></app-button>
+      </div>
+      <div class="col-xs-3">
+        <app-button [value]="'.'" [buttonType]='Primary' (eventBinding)="printValue($event)"></app-button>
+      </div>
+      <div class="col-xs-3">
+        <app-button [value]="'='" [buttonType]='Warning' (eventBinding)="printValue($event)"></app-button>
+      </div>
+      <div class="col-xs-3">
+        <app-button [value]="'/'" [buttonType]='Success' (eventBinding)="printValue($event)"></app-button>
+      </div>
+    </div>
+
+    <!-- Fifth Row -->
+    <div class="row">
+      <div class="col-xs-12">
+        <app-button [value]="'button'" [buttonType]='Danger'></app-button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
