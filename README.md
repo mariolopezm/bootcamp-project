@@ -1,5 +1,7 @@
 # Angular 2 Boot Camp
 
+
+![Calculator](Calculator.PNG)
 ## Components exercise #1
 
 -Inside the **/src/index.html** and **/src/styles.css** you will find the required HTML and CSS to create a calculator. If you run **ng serve** inside **/day2-components1/** you will be able to access **http://localhost:4200/** and see the calculator.
@@ -11,5 +13,16 @@
 ## Time Limit
 
 30 minutes
+
+## Components exercise #2
+
+-.Create a component for the buttons that will be use in the calculator component.
+-.Define the input and output properties for the new component.
+-.Replace the <button> tags for our new component.
+
+## Time Limit
+
+1 hour
+
 
 
