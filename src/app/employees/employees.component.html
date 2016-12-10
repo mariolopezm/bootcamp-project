@@ -1,0 +1,15 @@
+<!--<div class="container">
+  <div *ngFor="let employee of employees" class="well">
+    <input type="text" value="{{employee.name}}">
+  </div>
+</div>
+-->
+<div class="container">
+  <h2>Empleados</h2>
+  <ul *ngFor="let employee of employees" class="well">
+    <li>
+      <div>{{employee.name}}</div>
+      <div><a [routerLink]="['/employees', employee.id]">View</a></div>
+    </li>
+  </ul>
+</div>
