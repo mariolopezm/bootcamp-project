@@ -1,0 +1,61 @@
+<div class="container">
+    <h1>{{course.name}}</h1>
+    <form (ngSubmit)="onSubmit()" #courseForm="ngForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" 
+                  class="form-control" 
+                  id="name" 
+                  name="name"
+                  [(ngModel)]="course.name"
+                  required
+                  #name="ngModel">
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+              Please write a name
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="startingDate">Starting date</label>
+            <input type="date" 
+                  class="form-control" 
+                  id="startingDate" 
+                  name="startingDate"
+                  [(ngModel)]="course.startingDate"
+                  required
+                  #startingDate="ngModel">
+            <div [hidden]="startingDate.valid || startingDate.pristine" class="alert alert-danger">
+              Please select a starting date
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="duration">Starting date</label>
+            <input type="number" 
+                  class="form-control" 
+                  id="duration" 
+                  name="duration"
+                  [(ngModel)]="course.duration"
+                  required
+                  #startingDate="ngModel">
+            <div [hidden]="duration.valid || duration.pristine" class="alert alert-danger">
+              Please select the course duration
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="teacher">Taught by</label>
+            <app-teacher-select-list 
+                  class="form-control" 
+                  id="teacher" 
+                  name="teacher"
+                  [(ngModel)]="course.teacher"
+                  required
+                  #startingDate="ngModel"></app-teacher-select-list>
+            <div [hidden]="teacher.valid || teacher.pristine" class="alert alert-danger">
+              Please select the teacher
+            </div>
+        </div>
+        <button type="submit" class="btn btn-default"
+              [disabled]="!courseForm.form.valid">Save</button>
+         <button type="button" class="btn btn-default"
+              routerLink="/courses">Back</button>
+    </form>
+</div>

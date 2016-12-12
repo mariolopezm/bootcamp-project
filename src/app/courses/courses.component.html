@@ -1,0 +1,38 @@
+<div class="container">
+  <div>
+    <h2>Yuxi courses</h2>
+    <h6>{{currentDate}}</h6>
+    <button type="button" class="btn btn-default" aria-label="Right Align" [routerLink]="['/courses', 'new']">
+      <span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> New course
+    </button>
+  </div>
+  <table class="table table-striped" [mfData]="courses" #mf="mfDataTable" [mfRowsOnPage]="15">
+      <thead>
+      <tr>
+          <th style="width: 20%">
+              <mfDefaultSorter by="name">Name</mfDefaultSorter>
+          </th>
+          <th style="width: 20%">
+              <mfDefaultSorter by="duration">Hours</mfDefaultSorter>
+          </th>
+          <th style="width: 20%">
+              <mfDefaultSorter by="startingDate">Start date</mfDefaultSorter>
+          </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of mf.data">
+          <td><a [routerLink]="['/courses', item.id]">{{item.name}}</a></td>
+          <td><a [routerLink]="['/courses', item.id]">{{item.duration}}</a></td>
+          <td><a [routerLink]="['/courses', item.id]">{{item.startingDate | date:"dd/MM/yyyy"}}</a></td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+          <td colspan="4">
+              <mfBootstrapPaginator [rowsOnPageSet]="[5,10,15]"></mfBootstrapPaginator>
+          </td>
+      </tr>
+      </tfoot>
+  </table>
+</div>
