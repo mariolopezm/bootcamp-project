@@ -5,9 +5,9 @@ export class Course {
     constructor(
         public id: string,
         public name: string = "",
-        public startingDate: Date = new Date(),
+        public startingDate: string = "",
         public duration: number = 0,
-        public teacher: Teacher = null
+        public teacher: string = ""
     )
     {}
 }

@@ -1,6 +1,9 @@
+import { TeacherService } from './../teacher/shared/teacher.service';
 import { CourseService } from './shared/course.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Course } from './shared/course';
+import { Teacher } from './../teacher/shared/Teacher';
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,11 +15,13 @@ export class CourseComponent implements OnInit {
 
   courseId: string;
   course: Course;
+  teachers: Teacher[];
 
-  constructor(private route: ActivatedRoute, private courseService: CourseService) { }
+  constructor(private route: ActivatedRoute, private courseService: CourseService, private teacherService: TeacherService) { }
 
   ngOnInit() {
-  this.route.params.forEach((params: Params) => this.courseId = params["id"]);
+    this.teachers = this.teacherService.getAll();
+    this.route.params.forEach((params: Params) => this.courseId = params["id"]);
     if(this.courseId === "new"){
       this.course = new Course(this.courseService.getNextId());
     }

@@ -24,7 +24,7 @@
       <tr *ngFor="let item of mf.data">
           <td><a [routerLink]="['/courses', item.id]">{{item.name}}</a></td>
           <td><a [routerLink]="['/courses', item.id]">{{item.duration}}</a></td>
-          <td><a [routerLink]="['/courses', item.id]">{{item.startingDate | date:"dd/MM/yyyy"}}</a></td>
+          <td><a [routerLink]="['/courses', item.id]">{{item.startingDate | date:"yyyy/MM/dd"}}</a></td>
       </tr>
       </tbody>
       <tfoot>
