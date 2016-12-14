@@ -16,6 +16,8 @@ import { CourseComponent } from './course/course.component';
 import { CoursesComponent } from './courses/courses.component';
 import { StartDateStatusDirective } from './shared/start-date-status.directive';
 import { TeacherSelectListComponent } from './teacher/shared/teacher-select-list/teacher-select-list.component';
+import { MyDateStatusDirective } from './course/shared/my-date-status.directive';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { TeacherSelectListComponent } from './teacher/shared/teacher-select-list
     CourseComponent,
     CoursesComponent,
     StartDateStatusDirective,
-    TeacherSelectListComponent
+    TeacherSelectListComponent,
+    MyDateStatusDirective,
+    MyDateStatusDirective
   ],
   imports: [
     DataTableModule,
