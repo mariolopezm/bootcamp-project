@@ -1,19 +1,20 @@
-import { TeacherService } from './../../teacher/shared/teacher.service';
-import { Course } from './course';
+import { IService } from './../../shared/definitions/app.service';
+import { Course } from './../../course/shared/course';
+
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class CourseService {
+export class CourseService implements IService{
 
-  constructor(private teacherService: TeacherService) { }
+  constructor() { }
 
   courseList: Course[] = [
-    new Course("1", "Physics", "2016-02-15", 32, "1"),
-    new Course("2", "Writing", "2016-02-15", 32, "2"),
-    new Course("3", "Politics", "2016-02-15", 32, "3"),
-    new Course("4", "Music", "2016-02-15", 32, "4"),
-    new Course("5", "Art", "2016-02-15", 32, "5"),
-    new Course("6", "Pop culture", "2016-02-15", 32, "6"),
+    new Course("1", "Physics", "2016-12-30", 32, "1"),
+    new Course("2", "Writing", "2017-01-15", 32, "2"),
+    new Course("3", "Politics", "2017-03-05", 32, "3"),
+    new Course("4", "Music", "2016-11-15", 32, "4"),
+    new Course("5", "Art", "2016-12-30", 32, "5"),
+    new Course("6", "Pop culture", "2017-02-15", 32, "6"),
     new Course("7", "Game theory", "2016-02-15", 32, "7")
   ]
 

@@ -1,4 +1,5 @@
-import { TeacherService } from './shared/teacher.service';
+import { TeacherService } from './../core/services/teacher.service';
+
 import { Teacher } from './shared/teacher';
 
 import { ActivatedRoute, Params } from '@angular/router';
@@ -27,11 +28,17 @@ export class TeacherComponent implements OnInit {
   }
 
   onSubmit() {
+       /**
+     * clone the object so the reset function does not delete the object properties. 
+     * This is because the object is still referenced by ngModel.
+     * We use Object.assing as it does not need the prototype properties. 
+     * */
+    let newTeacher: Teacher = Object.assign({}, this.teacher);
     if(this.teacherId === "new"){
-      this.teacherService.insert(this.teacher);
+      this.teacherService.insert(newTeacher);
     }
     else{
-      this.teacherService.update(this.teacher);
+      this.teacherService.update(newTeacher);
     }
   }
 

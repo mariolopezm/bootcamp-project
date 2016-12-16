@@ -1,6 +1,8 @@
-import { TeacherService } from './../teacher/shared/teacher.service';
-import { Teacher } from './../teacher/shared/teacher';
+import { Teacher } from './../shared/teacher';
+import { TeacherService } from './../../core/services/teacher.service';
+
 import { Component, OnInit } from '@angular/core';
+
 @Component({
   selector: 'app-teachers',
   templateUrl: './teachers.component.html',

@@ -1,8 +1,9 @@
-import { Teacher } from './teacher';
+import { IService } from './../../shared/definitions/app.service';
+import { Teacher } from './../../teacher/shared/teacher';
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class TeacherService {
+export class TeacherService implements IService{
 
   teacherList: Teacher[] = [
     new Teacher("1", "Albert", "Einstein"),

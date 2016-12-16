@@ -1,5 +1,8 @@
-import { TeacherService } from './teacher/shared/teacher.service';
-import { CourseService } from './course/shared/course.service';
+import { CoursesComponent } from './course/courses/courses.component';
+import { TeachersComponent } from './teacher/teachers/teachers.component';
+
+import { CourseService } from './core/services/course.service';
+import { TeacherService } from './core/services/teacher.service';
 import { HomeComponent } from './home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -11,9 +14,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './core/navbar/navbar.component';
 import { TeacherComponent } from './teacher/teacher.component';
-import { TeachersComponent } from './teachers/teachers.component';
 import { CourseComponent } from './course/course.component';
-import { CoursesComponent } from './courses/courses.component';
 import { StartDateStatusDirective } from './shared/start-date-status.directive';
 import { TeacherSelectListComponent } from './teacher/shared/teacher-select-list/teacher-select-list.component';
 import { MyDateStatusDirective } from './course/shared/my-date-status.directive';

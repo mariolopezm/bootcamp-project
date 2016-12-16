@@ -1,5 +1,6 @@
-import { CourseService } from './../course/shared/course.service';
-import { Course } from './../course/shared/course';
+import { Course } from './../shared/course';
+import { CourseService } from './../../core/services/course.service';
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
