@@ -21,29 +21,32 @@ export class CourseComponent implements OnInit {
   constructor(private route: ActivatedRoute, private courseService: CourseService, private teacherService: TeacherService) { }
 
   ngOnInit() {
-    this.teachers = this.teacherService.getAll();
+    this.teacherService.getAll().subscribe(
+      (teachers:Teacher[]) => this.teachers = teachers
+    );  
     this.route.params.forEach((params: Params) => this.courseId = params["id"]);
     if(this.courseId === "new"){
-      this.course = new Course(this.courseService.getNextId());
+      this.course = new Course(null);
     }
     else{
-      this.course = this.courseService.getById(this.courseId);
+      this.courseService.getById(this.courseId).subscribe(
+        (course:Course) => this.course = course
+      );
     }
   }
 
   onSubmit() {
-    /**
-   * clone the object so the reset function does not delete the object properties. 
-   * This is because the object is still referenced by ngModel.
-   * We use Object.assing as it does not need the prototype properties. 
-   * */
-    let newCourse: Course = Object.assign({}, this.course);
     if(this.courseId === "new"){
-      this.courseService.insert(newCourse);
+      this.courseService.insert(this.course).subscribe
+        (x => this.showMessage(x.name + " created"));
     }
     else{
-      this.courseService.update(newCourse);
+      this.courseService.update(this.course).subscribe
+        (x => this.showMessage(x.name + " updated"));;
     }
+  }
 
+  showMessage(message: string){
+    alert("Course " + message);
   }
 }

@@ -15,7 +15,9 @@ export class TeachersComponent implements OnInit {
   teachers: Teacher[];
 
   ngOnInit() {
-    this.teachers = this.teacherService.getAll();
+    this.teacherService.getAll().subscribe(
+      (teachers:Teacher[]) => this.teachers = teachers
+    );  
   }
 
 }

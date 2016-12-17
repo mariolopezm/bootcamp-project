@@ -20,26 +20,28 @@ export class TeacherComponent implements OnInit {
   ngOnInit() {
     this.route.params.forEach((params: Params) => this.teacherId = params["id"]);
     if(this.teacherId === "new"){
-      this.teacher = new Teacher(this.teacherService.getNextId());
+      this.teacher = new Teacher(null);
     }
     else{
-      this.teacher = this.teacherService.getById(this.teacherId);
+      this.teacherService.getById(this.teacherId).subscribe(
+        (teacher:Teacher) => this.teacher = teacher
+      );
     }
   }
 
   onSubmit() {
-       /**
-     * clone the object so the reset function does not delete the object properties. 
-     * This is because the object is still referenced by ngModel.
-     * We use Object.assing as it does not need the prototype properties. 
-     * */
-    let newTeacher: Teacher = Object.assign({}, this.teacher);
     if(this.teacherId === "new"){
-      this.teacherService.insert(newTeacher);
+      this.teacherService.insert(this.teacher).subscribe
+        (x => this.showMessage(x.name + " created"));
     }
     else{
-      this.teacherService.update(newTeacher);
+      this.teacherService.update(this.teacher).subscribe
+        (x => this.showMessage(x.name + " updated"));;
     }
+  }
+
+  showMessage(message: string){
+    alert("Teacher " + message);
   }
 
 }

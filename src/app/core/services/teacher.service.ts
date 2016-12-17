@@ -1,40 +1,39 @@
 import { IService } from './../../shared/definitions/app.service';
 import { Teacher } from './../../teacher/shared/teacher';
 import { Injectable } from '@angular/core';
+import { Http, Response, Headers } from '@angular/http'
+import { Observable, Operator } from 'rxjs/Rx';
+import 'rxjs/add/operator/map'
 
 @Injectable()
 export class TeacherService implements IService{
 
-  teacherList: Teacher[] = [
-    new Teacher("1", "Albert", "Einstein"),
-    new Teacher("2", "Julio", "Cortazar"),
-    new Teacher("3", "John", "Keneddy"),
-    new Teacher("4", "Ozzy", "Osbourne"),
-    new Teacher("5", "Pablo", "Picasso"),
-    new Teacher("6", "Stan", "Lee"),
-    new Teacher("7", "Shigeru", "Miyamoto")
-  ]
+  private teachersUrl = 'api/teachers';
+  private headers = new Headers({ 'Content-Type': 'application/json' });
 
-  constructor() { }
+  constructor(private http: Http) { }
 
-  getAll():Teacher[]{
-    return this.teacherList;
+  getAll(): Observable<Teacher[]>{
+    return this.http.get(this.teachersUrl)
+            .map((r: Response) => r.json().data as Teacher[]);
   }
 
-  getById(id: string):Teacher{
-    return this.teacherList.find(myObj => myObj.id == id);
+  getById(id: string): Observable<Teacher>{
+    const url = `${this.teachersUrl}/${id}`;
+        return this.http.get(url)
+            .map((r: Response) => r.json().data as Teacher);
   }
 
-  getNextId():string{
-    return (this.teacherList.length + 1).toString();
+  insert(teacher: Teacher): Observable<Teacher>{
+    return this.http
+            .post(this.teachersUrl, JSON.stringify(teacher), { headers: this.headers })
+            .map((res: Response) => res.json().data as Teacher);
   }
 
-  insert(teacher: Teacher){
-    this.teacherList.push(teacher);
-  }
-
-  update(teacher: Teacher){
-    this.getById(teacher.id).name = teacher.name;
-    this.getById(teacher.id).lastName = teacher.lastName;
+  update(teacher: Teacher): Observable<Teacher>{
+    const url = `${this.teachersUrl}/${teacher.id}`;
+        return this.http
+            .put(url, JSON.stringify(teacher), { headers: this.headers })
+            .map(() => teacher);
   }
 }

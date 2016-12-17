@@ -1,45 +1,43 @@
+import { Observable, Operator } from 'rxjs/Rx';
+import 'rxjs/add/operator/map'
 import { IService } from './../../shared/definitions/app.service';
 import { Course } from './../../course/shared/course';
+import { Http, Response, Headers } from '@angular/http'
 
 import { Injectable } from '@angular/core';
 
 @Injectable()
 export class CourseService implements IService{
 
-  constructor() { }
+  private coursesUrl = 'api/courses';
+  private headers = new Headers({ 'Content-Type': 'application/json' });
 
-  courseList: Course[] = [
-    new Course("1", "Physics", "2016-12-30", 32, "1"),
-    new Course("2", "Writing", "2017-01-15", 32, "2"),
-    new Course("3", "Politics", "2017-03-05", 32, "3"),
-    new Course("4", "Music", "2016-11-15", 32, "4"),
-    new Course("5", "Art", "2016-12-30", 32, "5"),
-    new Course("6", "Pop culture", "2017-02-15", 32, "6"),
-    new Course("7", "Game theory", "2016-02-15", 32, "7")
-  ]
+  constructor(private http: Http) { }
 
-  getAll():Course[]{
-    return this.courseList;
+  getAll(): Observable<Course[]>{
+    return this.http.get(this.coursesUrl)
+            .map((r: Response) => r.json().data as Course[]);
   }
 
-  getById(id: string):Course{
-    return this.courseList.find(myObj => myObj.id == id);
+  getById(id: string): Observable<Course>{
+    const url = `${this.coursesUrl}/${id}`;
+        return this.http.get(url)
+            .map((r: Response) =>  r.json().data as Course);
   }
 
-  getNextId():string{
-    return (this.courseList.length + 1).toString();
+  insert(course: Course): Observable<Course>{
+    return this.http
+            .post(this.coursesUrl, JSON.stringify(course), { headers: this.headers })
+            .map(res => {
+              return res.json().data as Course
+            });
   }
 
-  insert(course: Course){
-    this.courseList.push(course);
-  }
-
-  update(course: Course){
-    let updatedCourse: Course = this.getById(course.id);
-    updatedCourse.name = course.name;
-    updatedCourse.startingDate = course.startingDate;
-    updatedCourse.duration = course.duration;
-    updatedCourse.teacher = course.teacher;
+  update(course: Course): Observable<Course>{
+    const url = `${this.coursesUrl}/${course.id}`;
+        return this.http
+            .put(url, JSON.stringify(course), { headers: this.headers })
+            .map(() => course);
   }
 
 }

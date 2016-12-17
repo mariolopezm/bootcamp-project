@@ -16,8 +16,9 @@ import { NavbarComponent } from './core/navbar/navbar.component';
 import { TeacherComponent } from './teacher/teacher.component';
 import { CourseComponent } from './course/course.component';
 import { StartDateStatusDirective } from './shared/start-date-status.directive';
-import { TeacherSelectListComponent } from './teacher/shared/teacher-select-list/teacher-select-list.component';
 import { MyDateStatusDirective } from './course/shared/my-date-status.directive';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { FakeWebApi } from './mock/fake-web-api.service';
 
 
 @NgModule({
@@ -30,7 +31,6 @@ import { MyDateStatusDirective } from './course/shared/my-date-status.directive'
     CourseComponent,
     CoursesComponent,
     StartDateStatusDirective,
-    TeacherSelectListComponent,
     MyDateStatusDirective,
     MyDateStatusDirective
   ],
@@ -39,6 +39,7 @@ import { MyDateStatusDirective } from './course/shared/my-date-status.directive'
     BrowserModule,
     FormsModule,
     HttpModule,
+    InMemoryWebApiModule.forRoot(FakeWebApi),
     RouterModule.forRoot([
       {
         path: 'teachers/:id',

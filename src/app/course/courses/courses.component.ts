@@ -17,7 +17,9 @@ export class CoursesComponent implements OnInit {
 
   ngOnInit() {
     this.currentDate = new Date().toLocaleDateString();
-    this.courses = this.courseService.getAll();
+    this.courseService.getAll().subscribe(
+      (courses:Course[]) => this.courses = courses
+    );  
   }
   
 
